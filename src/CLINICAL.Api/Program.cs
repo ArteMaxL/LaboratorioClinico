@@ -1,5 +1,6 @@
 using CLINICAL.Persistence.Extensions;
 using CLINICAL.Application.UseCase.Extensions;
+using CLINICAL.Api.Extensions.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.AddMiddleware();
 
 app.MapControllers();
 

@@ -11,8 +11,6 @@ namespace CLINICAL.Application.UseCase.UseCases.Analysis.Commands.UpdateCommand
     {
         public UpdateAnalysisValidator()
         {
-            // TODO Revisar MaximumLength
-
             RuleFor(x => x.Name)
                 .NotNull().WithMessage("El campo Nombre no puede ser nulo")
                 .NotEmpty().WithMessage("El campo Nombre no puede ser vacío")
